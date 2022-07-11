@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS ezprog_db;
+CREATE DATABASE ezprog_db;

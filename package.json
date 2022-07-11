@@ -1,0 +1,22 @@
+{
+  "name": "ez-prog",
+  "version": "1.0.0",
+  "description": "making progs ez",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AGarraffa/ez-prog.git"
+  },
+  "author": "A Garraffa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AGarraffa/ez-prog/issues"
+  },
+  "homepage": "https://github.com/AGarraffa/ez-prog#readme",
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
