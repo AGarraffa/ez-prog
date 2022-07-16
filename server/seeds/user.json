@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "username": "Al_Bruin",
+        "email": "agarraffa@bruinep.com",
+        "password": "test001",
+        "company_id": 1
+    },
+    {
+        "id": 2,
+        "username": "Al_Inflection",
+        "email": "agarraffa@infection.com",
+        "password": "test002",
+        "company_id": 2
+    }
+]
