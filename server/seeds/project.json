@@ -1,11 +1,9 @@
 [
     {
-        "id": 1,
         "name": "Williston Basin",
         "company_id": 1
     },
     {
-        "id": 2,
         "name": "Utica Basin",
         "company_id": 2
     }

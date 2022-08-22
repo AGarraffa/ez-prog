@@ -60,6 +60,7 @@ router.put('/:id', async (req, res) => {
 
         if (!companyData) {
             res.status(404).json({ message: 'No company with that id'})
+            return;
         };
 
         res.status(200).json(companyData);
@@ -77,6 +78,7 @@ router.delete('/:id', async (req, res) => {
 
         if (!companyData) {
             res.status(404).json({message: 'No company with that id'})
+            return;
         }
 
         res.status(200).json(companyData);

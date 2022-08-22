@@ -29,6 +29,7 @@ router.get('/:id', async (req, res) => {
 
         if (!projectData) {
             res.status(404).json({message: 'No project with that id'})
+            return;
         }
 
         res.status(200).json(projectData);
@@ -62,6 +63,7 @@ router.put('/:id', async (req, res) => {
 
         if (!projectData) {
             res.status(404).json({message: 'No proejct with that id'})
+            return;
         }
 
         res.status(200).json(projectData);
@@ -79,6 +81,7 @@ router.delete('/:id', async (req, res) => {
 
         if (!projectData) {
             res.status(404).json({message: 'No project with that id'});
+            return;
         }
 
         res.status(200).json(projectData);

@@ -28,6 +28,7 @@ router.get('/:id', async (req, res) => {
 
         if (!padData) {
             res.status(404).json({message: 'No pad with that id'})
+            return;
         };
 
         res.status(200).json(padData);
@@ -61,6 +62,7 @@ router.put('/:id', async (req, res) => {
 
         if (!padData) {
             res.status(404).json({message: 'No pad with that id'})
+            return;
         };
 
         res.status(200).json(padData);
@@ -78,6 +80,7 @@ router.delete('/:id', async (req, res) => {
 
         if (!padData) {
             res.status(404).json({message: 'No pad with that id'})
+            return;
         };
 
         res.status(200).json(padData);

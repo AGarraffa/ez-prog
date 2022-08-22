@@ -18,5 +18,6 @@
   "homepage": "https://github.com/AGarraffa/ez-prog#readme",
   "dependencies": {
     "react": "^18.2.0"
-  }
+  },
+  "keywords": []
 }
