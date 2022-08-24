@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pad, Project } = require('../../models');
+const { Pad, Project, Company } = require('../../models');
 
 // api/pad endpoint
 
@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
     try {
 
         const padData = await Pad.findAll({
-            include: [{model: Project}]
+            include: [{model: Project, Company}]
         });
 
         res.status(200).json(padData);
@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
     try {
         
         const padData = await Pad.findByPk(req.params.id, {
-            include: [{model: Project}]
+            include: [{model: Project, Company}]
         });
 
         if (!padData) {
