@@ -17,7 +17,51 @@ Well.init(
         },
         API: {
             type: DataTypes.INTEGER,
-            allowNull: false,
+            allowNull: true,
+        },
+        SHLFootage: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        SHLLat: {
+            type: DataTypes.DOUBLE,
+            allowNull: true,
+        },
+        SHLLon: {
+            type: DataTypes.DOUBLE,
+            allowNull: true,
+        },
+        BHLFootage: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        BHLLat: {
+            type: DataTypes.DOUBLE,
+            allowNull: true,
+        },
+        BHLLon: {
+            type: DataTypes.DOUBLE,
+            allowNull: true,
+        },
+        target: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        kb: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        elev: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        logProg: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        rig: {
+            type: DataTypes.STRING,
+            allowNull: true,
         },
         pad_id: {
             type: DataTypes.INTEGER,
@@ -38,3 +82,5 @@ Well.init(
 );
 
 module.exports = Well;
+
+// tops (array), kb elev (write a method for calculating it), contact information (array)

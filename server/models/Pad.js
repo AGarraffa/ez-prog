@@ -23,6 +23,18 @@ Pad.init(
                 key: 'id',
             },
         },
+        state: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        county: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        field: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         project_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
