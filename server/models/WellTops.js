@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Tops extends Model{}
+class WellTops extends Model{}
 
-Tops.init(
+WellTops.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -15,12 +15,16 @@ Tops.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        project_id: {
+        depth: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        well_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: 'project',
-                key: 'id'
+                model: 'well',
+                key: 'id',
             },
         },
     },
@@ -29,8 +33,8 @@ Tops.init(
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'tops'
+        modelName: 'welltops',
     }
 );
 
-module.exports = Tops;
+module.exports = WellTops;
