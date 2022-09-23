@@ -61,6 +61,11 @@ router.put('/:id', async (req, res) => {
             {where: {id: req.params.id}}
         );
 
+        if (!wellData) {
+            res.status(400).json({message: 'No well with that id'});
+            return;
+        }
+
         res.status(200).json(wellData);
 
     } catch (err) {

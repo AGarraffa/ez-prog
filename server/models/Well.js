@@ -71,6 +71,14 @@ Well.init(
                 key: 'id',
             },
         },
+        tops: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            references: {
+                model: 'welltops',
+                key: 'id', 
+            },
+        },
     },
     {
         sequelize,
@@ -82,5 +90,3 @@ Well.init(
 );
 
 module.exports = Well;
-
-// tops (array), kb elev (write a method for calculating it), contact information (array)
