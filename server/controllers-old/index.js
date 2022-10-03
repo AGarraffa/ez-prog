@@ -1,9 +1,4 @@
 const router = require('express').Router();
-
-// const companyRoutes = require('./company-routes');
-// const padroutes = require('./pad-routes');
-// const projectRoutes = require('./project-routes');
-
 const apiRoutes = require('./api');
 
 router.use('/api', apiRoutes);
