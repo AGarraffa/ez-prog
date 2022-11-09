@@ -18,7 +18,8 @@ export default function createProject() {
 
         e.preventDefault();
 
-        console.log(formData.projectName);
+        console.log ("Project Submitted")
+        console.log(formData);
 
     }
 

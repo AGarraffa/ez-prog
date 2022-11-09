@@ -20,6 +20,7 @@ export default function createPad() {
         e.preventDefault();
 
         console.log("Pad Submitted");
+        console.log(formData)
 
     }
 

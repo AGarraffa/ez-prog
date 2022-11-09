@@ -31,6 +31,7 @@ export default function createWell() {
         e.preventDefault();
 
         console.log("Well Submitted");
+        console.log(formData)
 
     }
 
