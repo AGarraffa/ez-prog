@@ -34,13 +34,5 @@ function App() {
 
 //consruct the SQL API endpoing using httpLink
 
-// function App() {
-
-//   return (
-//     <div> App goes here </div>
-//   )
-// }
-
-
 
 export default App;
