@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 // store input changes in local storage for ease of access. maybe hash it first
 
-export default function createProject() {
+export default function CreateProject() {
 
     const [formData, setFormData] = useState();
 

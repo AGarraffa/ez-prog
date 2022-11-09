@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 // store input changes in local storage for ease of access. maybe hash it first
 
-export default function createPad() {
+export default function CreatePad() {
 
     const [formData, setFormData] = useState();
 
@@ -33,7 +33,7 @@ export default function createPad() {
                      className="pad-input"
                      type="text"
                      placeholder="Pad Name"
-                     value={formData.value}
+                     value={formData.value ?? ""}
                      name="padName"
                      onChange={handleInputChange}
                      ></input>
@@ -49,3 +49,5 @@ export default function createPad() {
     //     return <Login />
     // }
 }
+
+// issue with formData.value being undefined. maybe define it initially? carry this through the other components

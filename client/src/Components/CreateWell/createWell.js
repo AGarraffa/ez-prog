@@ -18,7 +18,7 @@ import React, { useState } from "react";
  
 // tops (separate component for tops)
 
-export default function createWell() {
+export default function CreateWell() {
 
     const [formData, setFormData] = useState();
 

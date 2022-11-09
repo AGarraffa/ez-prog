@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import React  from "react";
 import './App.css';
 // bring in the DB stuff from SQL
@@ -8,7 +8,13 @@ import './App.css';
 //   Route,
 // } from "react-router-dom";
 
-//import the pages (ie home, well search, etc);
+// components here are for testing purposes
+import CreatePad from "./Components/CreatePad/CreatePad";
+import CreateProject from "./Components/CreateProject/CreateProject";
+// import CreateSection from "./Components/CreateSection/CreateSection";
+import CreateWell from './Components/CreateWell/CreateWell';
+// import HoleLocation from "./Components/HoleLocation/HoleLocation";
+// import WellTops from "./Components/WellTops/WellTops";
 
 function App() {
   return (
@@ -27,6 +33,10 @@ function App() {
           Learn React
         </a> */}
         <h1>Hello World!</h1>
+        {/* <CreateProject /> */}
+        <CreatePad />
+        {/* <CreateWell /> */}
+
       </header>
     </div>
   );

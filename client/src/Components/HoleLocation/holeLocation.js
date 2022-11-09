@@ -1,0 +1,1 @@
+// when entering the section, enter twnshp, rng, and have a button for "get dimensions". If one exists, have it populate the width and height with the information (for plan view rendering purposes)
