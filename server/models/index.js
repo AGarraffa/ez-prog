@@ -5,6 +5,7 @@ const Company = require('./Company');
 const Well = require('./Well');
 const Tops = require('./Tops');
 const WellTops = require('./WellTops');
+const Section = require('./Section');
 
 Company.hasMany(User);
 User.belongsTo(Company, { foreignKey: 'company_id'});
@@ -27,4 +28,7 @@ Well.belongsTo(Pad, { foreignKey: 'pad_id'});
 Well.hasMany(WellTops);
 WellTops.belongsTo(Well, { foreignKey: 'well_id'});
 
-module.exports = { User, Pad, Project, Company, Well, Tops, WellTops };
+Project.hasMany(Section);
+Section.belongsTo(Project, {foreignKey: 'project_id'});
+
+module.exports = { User, Pad, Project, Company, Well, Tops, WellTops, Section };
