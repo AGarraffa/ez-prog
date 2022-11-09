@@ -36,6 +36,8 @@ export default function createPad() {
                      name="padName"
                      onChange={handleInputChange}
                      ></input>
+
+                     {/* input county */}
                      <div>
                         <input type="submit" value="Add Pad" className="submitButton" />
                      </div>
