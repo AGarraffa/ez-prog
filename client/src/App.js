@@ -32,10 +32,10 @@ function App() {
         >
           Learn React
         </a> */}
-        <h1>Hello World!</h1>
-        {/* <CreateProject /> */}
+        <h1>EZ Prog!</h1>
+        <CreateProject />
         <CreatePad />
-        {/* <CreateWell /> */}
+        <CreateWell />
 
       </header>
     </div>

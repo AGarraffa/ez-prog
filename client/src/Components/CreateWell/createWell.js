@@ -20,7 +20,7 @@ import React, { useState } from "react";
 
 export default function CreateWell() {
 
-    const [formData, setFormData] = useState();
+    const [formData, setFormData] = useState("");
 
     const handleInputChange= (e) => {
         const { name, value } = e.target;
@@ -45,7 +45,7 @@ export default function CreateWell() {
                      className="well-input"
                      type="text"
                      placeholder="Well Name"
-                     value={formData.wellName}
+                     value={formData.wellName ?? ""}
                      name="wellName"
                      onChange={handleInputChange}
                     ></input>
@@ -54,7 +54,7 @@ export default function CreateWell() {
                      className="well-input"
                      type="text"
                      placeholder="API Number"
-                     value={formData.api}
+                     value={formData.api ?? ""}
                      name="api"
                      onChange={handleInputChange}
                     ></input>
@@ -63,7 +63,7 @@ export default function CreateWell() {
                      className="well-input"
                      type="text"
                      placeholder="Field"
-                     value={formData.field}
+                     value={formData.field ?? ""}
                      name="field"
                      onChange={handleInputChange}
                     ></input>
@@ -77,7 +77,7 @@ export default function CreateWell() {
                      className="well-input"
                      type="text"
                      placeholder="Target Formation"
-                     value={formData.tgtFormation}
+                     value={formData.tgtFormation ?? ""}
                      name="tgtFormation"
                      onChange={handleInputChange}
                     ></input>
@@ -87,10 +87,14 @@ export default function CreateWell() {
                      className="well-input"
                      type="text"
                      placeholder="Estimated TD"
-                     value={formData.td}
+                     value={formData.td ?? ""}
                      name="td"
                      onChange={handleInputChange}
                     ></input>
+
+                    <div>
+                        <input type ="submit" value= "Add Well" className="submitButton" />
+                    </div>
 
                  </form>
             </div>

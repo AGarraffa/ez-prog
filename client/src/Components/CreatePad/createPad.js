@@ -5,12 +5,11 @@ import React, { useState } from 'react';
 
 export default function CreatePad() {
 
-    const [formData, setFormData] = useState();
+    const [formData, setFormData] = useState("");
 
     const handleInputChange = (e) => {
-
         const { name, value } = e.target;
-        setFormData( { ...formData, [name]: value});
+        setFormData({ ...formData, [name]: value});
     }
 
 
@@ -33,7 +32,7 @@ export default function CreatePad() {
                      className="pad-input"
                      type="text"
                      placeholder="Pad Name"
-                     value={formData.value ?? ""}
+                     value={formData.padName ?? ""}
                      name="padName"
                      onChange={handleInputChange}
                      ></input>

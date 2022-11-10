@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 export default function CreateProject() {
 
-    const [formData, setFormData] = useState();
+    const [formData, setFormData] = useState("");
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -32,7 +32,7 @@ export default function CreateProject() {
                         className="project-name-input"
                         type="text"
                         placeholder="Project Name"
-                        value=""
+                        value={formData.projectName ?? ""}
                         name="projectName"
                         onChange={handleInputChange}
                         ></input>
