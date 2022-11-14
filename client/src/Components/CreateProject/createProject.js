@@ -1,4 +1,4 @@
-import "./createProject.css";
+import "./CreateProject.css";
 import React, { useState } from 'react';
 
 // store input changes in local storage for ease of access. maybe hash it first
@@ -20,7 +20,10 @@ export default function CreateProject() {
 
         console.log ("Project Submitted")
         console.log(formData);
+        localStorage.setItem('Project', formData.projectName);
 
+        //clears Form
+        setFormData("")
     }
 
     // insert auth middleware

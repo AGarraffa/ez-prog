@@ -1,4 +1,4 @@
-import "./createPad.css";
+import "./CreatePad.css"
 import React, { useState } from 'react';
 
 // store input changes in local storage for ease of access. maybe hash it first
@@ -20,8 +20,11 @@ export default function CreatePad() {
 
         console.log("Pad Submitted");
         console.log(formData)
+        localStorage.setItem('Pad Name', formData.padName);
 
-    }
+        //clears Form
+        setFormData("")
+    };
 
     // insert auth middleware
     // if (Auth.loggedIn()) {
@@ -48,5 +51,3 @@ export default function CreatePad() {
     //     return <Login />
     // }
 }
-
-// issue with formData.value being undefined. maybe define it initially? carry this through the other components

@@ -15,11 +15,11 @@ Section.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        Township: {
+        township: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        Range: {
+        range: {
             type: DataTypes.STRING,
             allowNull: false,
         },

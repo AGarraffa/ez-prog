@@ -11,8 +11,9 @@ import './App.css';
 // components here are for testing purposes
 import CreatePad from "./Components/CreatePad/CreatePad";
 import CreateProject from "./Components/CreateProject/CreateProject";
-// import CreateSection from "./Components/CreateSection/CreateSection";
+import CreateSection from "./Components/CreateSection/CreateSection";
 import CreateWell from './Components/CreateWell/CreateWell';
+import CreateTop from './Components/CreateTop/CreateTop';
 // import HoleLocation from "./Components/HoleLocation/HoleLocation";
 // import WellTops from "./Components/WellTops/WellTops";
 
@@ -33,10 +34,17 @@ function App() {
           Learn React
         </a> */}
         <h1>EZ Prog!</h1>
-        <CreateProject />
-        <CreatePad />
-        <CreateWell />
 
+        <h2>Create Project</h2>
+        <CreateProject />
+        <h2>Create Pad</h2>
+        <CreatePad />
+        <h2>Create Well</h2>
+        <CreateWell />
+        <h2>Create Section</h2>
+        <CreateSection />
+        <h2>Create Top</h2>
+        <CreateTop />
       </header>
     </div>
   );

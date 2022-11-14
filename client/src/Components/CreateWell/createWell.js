@@ -1,4 +1,4 @@
-import "./createWell.css";
+import "./CreateWell.css";
 import React, { useState } from "react";
 // import the tops component
 // import SHL/BHL component
@@ -27,11 +27,19 @@ export default function CreateWell() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
 
         console.log("Well Submitted");
         console.log(formData)
+        localStorage.setItem('wellMame', formData.wellName);
+        localStorage.setItem('api', formData.api);
+        localStorage.setItem('field', formData.field);
+        localStorage.setItem('target', formData.tgtFormation);
+        localStorage.setItem('td', formData.td);
+
+        //clears Form
+        setFormData("")
 
     }
 
