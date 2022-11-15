@@ -14,6 +14,7 @@ import CreateProject from "./Components/CreateProject/CreateProject";
 import CreateSection from "./Components/CreateSection/CreateSection";
 import CreateWell from './Components/CreateWell/CreateWell';
 import CreateTop from './Components/CreateTop/CreateTop';
+import WellTops from './Components/WellTops/WellTops';
 // import HoleLocation from "./Components/HoleLocation/HoleLocation";
 // import WellTops from "./Components/WellTops/WellTops";
 
@@ -45,6 +46,8 @@ function App() {
         <CreateSection />
         <h2>Create Top</h2>
         <CreateTop />
+        <h2>Well Tops</h2>
+        <WellTops />
       </header>
     </div>
   );
