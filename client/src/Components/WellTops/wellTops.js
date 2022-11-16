@@ -19,18 +19,14 @@ export default function WellTops() {
     //     {name: 'Nisku'}
     //     ];
 
-    let testTops = ['Pierre', 'Madison', 'Kibby', 'Lodgepole', 'False Bakken', 'UBS', 'MBS', 'LBS', 'TF1', 'TF2', 'TF2', 'Nisku']
+    let testTops = ['Pierre', 'Madison', 'Kibby', 'Lodgepole', 'False Bakken', 'UBS', 'MBS', 'LBS', 'TF1', 'TF2', 'TF3', 'Nisku']
 
     const [formData, setFormData] = useState("");
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        console.log(name);
-        console.log(value);
         setFormData({ ...formData, [name]: value });
-        console.log(formData)
-
-
+        localStorage.setItem(name, value)
     };
 
     const submitHandler = async (e) => {
@@ -41,8 +37,6 @@ export default function WellTops() {
         console.log(formData)
     }
 
-
-    // I might need to create another components specifically for individual tops and depths, pass the props down, and iterate that rather than all in one component
     // if (Auth.loggedIn()) {
         return (
             <div>
@@ -55,7 +49,7 @@ export default function WellTops() {
                                 className="wellTops-input-form"
                                 type="text"
                                 placeholder="SSD"
-                                value={formData.element ?? ""}
+                                value={formData[element] ?? ""}
                                 name={element}
                                 onChange={handleInputChange}
                             ></input>
