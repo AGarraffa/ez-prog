@@ -1,23 +1,9 @@
+// need to bring in the data for the well being entered to allow tvd to calculate.
+
 import "./WellTops.css"
 import React, { useState } from 'react';
 
 export default function WellTops() {
-
-    // These are just for building out the page. In the final version the tops will populate based on the project tops.
-    // let testTops = [
-    //     {name: 'Pierre'}, 
-    //     {name: 'Madison'},
-    //     {name: 'Kibby'}, 
-    //     {name: 'Lodgepole'}, 
-    //     {name: 'False Bakken'},
-    //     {name: 'UBS'}, 
-    //     {name: 'MBS'}, 
-    //     {name: 'LBS'}, 
-    //     {name: 'TF1'}, 
-    //     {name: 'TF2'}, 
-    //     {name: 'TF3'}, 
-    //     {name: 'Nisku'}
-    //     ];
 
     let testTops = ['Pierre', 'Madison', 'Kibby', 'Lodgepole', 'False Bakken', 'UBS', 'MBS', 'LBS', 'TF1', 'TF2', 'TF3', 'Nisku']
 

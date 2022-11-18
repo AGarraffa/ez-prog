@@ -7,6 +7,7 @@ const topsRoutes = require('./topsRoutes');
 const userRoutes = require('./userRoutes');
 const wellRoutes = require('./wellRoutes');
 const wellTopsRoutes = require('./wellTopsRoutes');
+const sectionRoutes = require('./sectionRoutes');
 
 
 router.use('/company', companyRoutes);
@@ -16,6 +17,7 @@ router.use('/tops', topsRoutes);
 router.use('/user', userRoutes);
 router.use('well', wellRoutes);
 router.use('/welltops', wellTopsRoutes);
+router.use('/section', sectionRoutes);
 
 module.exports = router;
 

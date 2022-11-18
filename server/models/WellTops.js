@@ -15,9 +15,13 @@ WellTops.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        depth: {
+        ssd: {
             type: DataTypes.INTEGER,
             allowNull: false,
+        },
+        tvd: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
         },
         well_id: {
             type: DataTypes.INTEGER,
@@ -38,3 +42,5 @@ WellTops.init(
 );
 
 module.exports = WellTops;
+
+// NB: tops should be entered in ssd on the FE. tvd will be calculated based on the elevation + kb values from the well.

@@ -75,6 +75,24 @@ export default function CreateWell() {
                      name="field"
                      onChange={handleInputChange}
                     ></input>
+                                        
+                    <input
+                     className="well-input"
+                     type="text"
+                     placeholder="Ground Elevation"
+                     value={formData.elev ?? ""}
+                     name="elev"
+                     onChange={handleInputChange}
+                    ></input>
+                                        
+                    <input
+                     className="well-input"
+                     type="text"
+                     placeholder="KB Height"
+                     value={formData.kb ?? ""}
+                     name="kb"
+                     onChange={handleInputChange}
+                    ></input>
                     
                     {/* insert the hole location component here */}
 
