@@ -11,11 +11,11 @@ const sectionRoutes = require('./sectionRoutes');
 
 
 router.use('/company', companyRoutes);
-router.use('pad', padRoutes);
+router.use('/pad', padRoutes);
 router.use('/project', projectRoutes);
 router.use('/tops', topsRoutes);
 router.use('/user', userRoutes);
-router.use('well', wellRoutes);
+router.use('/well', wellRoutes);
 router.use('/welltops', wellTopsRoutes);
 router.use('/section', sectionRoutes);
 
