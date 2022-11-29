@@ -7,21 +7,21 @@ export default function CreatePad() {
 
     const [formData, setFormData] = useState("");
 
-    useEffect(() => {
-        const url = '/api/project';
+    // useEffect(() => {
+    //     const url = '/api/project';
 
-        const fetchData = async() => {
-            try {
-                const response = await fetch(url);
-                const json = await response.json();
-                console.log(json);
-            } catch (err) {
-                console.log(err);
-            }
-        }
+    //     const fetchData = async() => {
+    //         try {
+    //             const response = await fetch(url);
+    //             const json = await response.json();
+    //             console.log(json);
+    //         } catch (err) {
+    //             console.log(err);
+    //         }
+    //     }
 
-        fetchData();
-    });
+    //     fetchData();
+    // });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
