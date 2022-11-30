@@ -23,6 +23,8 @@ export default function WellTops() {
         console.log(formData)
     }
 
+    // include a + button to add new tops to the well
+
     // if (Auth.loggedIn()) {
         return (
             <div>
