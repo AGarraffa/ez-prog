@@ -1,6 +1,8 @@
 import "./CreatePad.css"
 import React, { useState, useEffect } from 'react';
 
+import { get } from "../../utils/fetch"
+
 // store input changes in local storage for ease of access. maybe hash it first
 
 export default function CreatePad() {
@@ -37,9 +39,14 @@ export default function CreatePad() {
         // }
 
         // api/pad returns the component, not the api (it's looking for localhost:3000/api/pad, not localhost:3001 which is the api address)
-        const data = await fetch('http://localhost:3001/api/pad');
-        const json = await data.json();
-        console.log(json);
+        // const data = await fetch('http://localhost:3001/api/pad');
+        // const json = await data.json();
+        // console.log(json);
+
+        let data = get('pad', 1);
+
+        console.log('Data:');
+        console.log(data)
 
         //clears Form
         setFormData("")
