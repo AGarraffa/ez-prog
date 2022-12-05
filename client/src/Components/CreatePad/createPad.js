@@ -7,21 +7,6 @@ export default function CreatePad() {
 
     const [formData, setFormData] = useState("");
 
-    // useEffect(() => {
-    //     const url = '/api/project';
-
-    //     const fetchData = async() => {
-    //         try {
-    //             const response = await fetch(url);
-    //             const json = await response.json();
-    //             console.log(json);
-    //         } catch (err) {
-    //             console.log(err);
-    //         }
-    //     }
-
-    //     fetchData();
-    // });
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -37,6 +22,24 @@ export default function CreatePad() {
         console.log ("Pad Submitted");
         console.log(formData);
         localStorage.setItem('Pad', formData.projectName);
+
+
+        // const data = async () => {
+        //     try { 
+        //         const response = await fetch('/api/pad');
+        //         const json = await response.json();
+        //         console.log('fetch request:');
+        //         console.log(json);
+        //     } catch (err) {
+        //         console.log('error');
+        //         console.log(err);
+        //     }
+        // }
+
+        // api/pad returns the component, not the api (it's looking for localhost:3000/api/pad, not localhost:3001 which is the api address)
+        const data = await fetch('http://localhost:3001/api/pad');
+        const json = await data.json();
+        console.log(json);
 
         //clears Form
         setFormData("")

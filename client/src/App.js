@@ -22,10 +22,10 @@ function App() {
 
   // testing the fetch
   // need to change the header to Access-Control-Allow-Origin: * (this is a security risk but for dev it's fine) but not sure where to insert it
-  fetch('http://localhost:3001/api/pad').then((res) => res.json().then((data) => 
-  {
-    console.log(data);
-  }))
+  // fetch('http://localhost:3001/api/pad').then((res) => res.json().then((data) => 
+  // {
+  //   console.log(data);
+  // }))
 
   return (
     <div className="App">
