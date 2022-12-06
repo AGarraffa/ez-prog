@@ -1,6 +1,8 @@
 import "./CreateProject.css";
 import React, { useState } from 'react';
 
+import { get, post, update, erase } from '../../utils/fetch';
+
 // store input changes in local storage for ease of access. maybe hash it first
 
 export default function CreateProject() {
@@ -21,6 +23,12 @@ export default function CreateProject() {
         console.log ("Project Submitted")
         console.log(formData);
         localStorage.setItem('Project', formData.projectName);
+
+        let data = {
+            name: formData.projectName
+        }
+
+        post('company', data);
 
         //clears Form
         setFormData("")

@@ -1,7 +1,7 @@
 import "./CreatePad.css"
 import React, { useState, useEffect } from 'react';
 
-import { get } from "../../utils/fetch"
+import { get, post, update, erase } from "../../utils/fetch"
 
 // store input changes in local storage for ease of access. maybe hash it first
 
@@ -23,30 +23,19 @@ export default function CreatePad() {
 
         console.log ("Pad Submitted");
         console.log(formData);
-        localStorage.setItem('Pad', formData.projectName);
+        localStorage.setItem('Pad', formData.padName);
 
+        let data = {
+            name: formData.padName,
+            // make sure to pull all the up-model data (company name, project, etc);
+            company_id: 1,
+            state: 'ND',
+            county: 'Williston',
+            field: 'Fort Berthold',
+            project_id: 1,
+        }
 
-        // const data = async () => {
-        //     try { 
-        //         const response = await fetch('/api/pad');
-        //         const json = await response.json();
-        //         console.log('fetch request:');
-        //         console.log(json);
-        //     } catch (err) {
-        //         console.log('error');
-        //         console.log(err);
-        //     }
-        // }
-
-        // api/pad returns the component, not the api (it's looking for localhost:3000/api/pad, not localhost:3001 which is the api address)
-        // const data = await fetch('http://localhost:3001/api/pad');
-        // const json = await data.json();
-        // console.log(json);
-
-        let data = get('pad', 1);
-
-        console.log('Data:');
-        console.log(data)
+        post('pad', data);
 
         //clears Form
         setFormData("")
@@ -66,7 +55,7 @@ export default function CreatePad() {
                      onChange={handleInputChange}
                      ></input>
 
-                     {/* input county */}
+                     {/* input state, county, etc */}
                      <div>
                         <input type="submit" value="Add Pad" className="submitButton" />
                      </div>
