@@ -32,11 +32,29 @@ export default function CreateWell() {
 
         console.log("Well Submitted");
         console.log(formData)
-        localStorage.setItem('wellMame', formData.wellName);
-        localStorage.setItem('api', formData.api);
-        localStorage.setItem('field', formData.field);
-        localStorage.setItem('target', formData.tgtFormation);
-        localStorage.setItem('td', formData.td);
+        // localStorage.setItem('wellMame', formData.wellName);
+        // localStorage.setItem('api', formData.api);
+        // localStorage.setItem('target', formData.tgtFormation);
+        // localStorage.setItem('td', formData.td);
+
+        
+        for( const property in formData) {
+            localStorage.setItem(`${property}`, `${formData[property]}`);
+        }
+
+        // typeLog should be a dropdown of existing wells that you can pull tops from.
+        let data = {
+            name: formData.wellName,
+            api: formData.api,
+            kb: formData.kb,
+            elev: formData.elev,
+            tgtFormation: formData.tgtFormation,
+            td: formData.td,
+            rig: formData.rig,
+            pad_id: 1,
+            typeLog: 1,
+
+        }
 
         //clears Form
         setFormData("")
@@ -66,25 +84,7 @@ export default function CreateWell() {
                      name="api"
                      onChange={handleInputChange}
                     ></input>
-                    
-                    <input
-                     className="well-input"
-                     type="text"
-                     placeholder="Field"
-                     value={formData.field ?? ""}
-                     name="field"
-                     onChange={handleInputChange}
-                    ></input>
-                                        
-                    <input
-                     className="well-input"
-                     type="text"
-                     placeholder="Ground Elevation"
-                     value={formData.elev ?? ""}
-                     name="elev"
-                     onChange={handleInputChange}
-                    ></input>
-                                        
+
                     <input
                      className="well-input"
                      type="text"
@@ -93,9 +93,17 @@ export default function CreateWell() {
                      name="kb"
                      onChange={handleInputChange}
                     ></input>
-                    
-                    {/* insert the hole location component here */}
 
+                    <input
+                     className="well-input"
+                     type="text"
+                     placeholder="Ground Elevation"
+                     value={formData.elev ?? ""}
+                     name="elev"
+                     onChange={handleInputChange}
+                    ></input>
+                                    
+                    {/* insert the hole location component here */}
 
                     {/* insert tops component here */}
 
@@ -115,6 +123,15 @@ export default function CreateWell() {
                      placeholder="Estimated TD"
                      value={formData.td ?? ""}
                      name="td"
+                     onChange={handleInputChange}
+                    ></input>
+
+                    <input
+                     className="well-input"
+                     type="text"
+                     placeholder="Rig"
+                     value={formData.rig ?? ""}
+                     name="rig"
                      onChange={handleInputChange}
                     ></input>
 

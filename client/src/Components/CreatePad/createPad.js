@@ -23,15 +23,23 @@ export default function CreatePad() {
 
         console.log ("Pad Submitted");
         console.log(formData);
-        localStorage.setItem('Pad', formData.padName);
+
+        //set's object to local storage for easier reference
+        for( const property in formData) {
+            localStorage.setItem(`${property}`, `${formData[property]}`);
+        }
+        // localStorage.setItem('Pad', formData.padName);
+        // localStorage.setItem('State', formData.state);
+        // localStorage.setItem('County', formData.county);
+        // localStorage.setItem('')
 
         let data = {
             name: formData.padName,
-            // make sure to pull all the up-model data (company name, project, etc);
+            // pull project and company id's from the server upon login.
             company_id: 1,
-            state: 'ND',
-            county: 'Williston',
-            field: 'Fort Berthold',
+            state: formData.state,
+            county: formData.county,
+            field: formData.field,
             project_id: 1,
         }
 
@@ -56,6 +64,33 @@ export default function CreatePad() {
                      ></input>
 
                      {/* input state, county, etc */}
+                     <input 
+                     className="pad-input"
+                     type="text"
+                     placeholder="State"
+                     value={formData.state ?? ""}
+                     name="state"
+                     onChange={handleInputChange}
+                     ></input>
+                    
+                    <input 
+                     className="pad-input"
+                     type="text"
+                     placeholder="County"
+                     value={formData.county ?? ""}
+                     name="county"
+                     onChange={handleInputChange}
+                     ></input>
+                     
+                     <input 
+                     className="pad-input"
+                     type="text"
+                     placeholder="Field"
+                     value={formData.field ?? ""}
+                     name="field"
+                     onChange={handleInputChange}
+                     ></input>                  
+
                      <div>
                         <input type="submit" value="Add Pad" className="submitButton" />
                      </div>
