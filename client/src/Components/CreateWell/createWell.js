@@ -1,5 +1,7 @@
 import "./CreateWell.css";
 import React, { useState } from "react";
+
+import { get, post, update, erase } from '../../utils/fetch';
 // import the tops component
 // import SHL/BHL component
 
@@ -53,15 +55,19 @@ export default function CreateWell() {
             rig: formData.rig,
             pad_id: 1,
             typeLog: 1,
+            drilled: false,
+            typelog: false,
 
         }
+
+        post('well', data);
 
         //clears Form
         setFormData("")
 
     }
 
-    //inster auth middleware
+    //instert auth middleware
     // if (Auth.loggedIn()) {
         return (
             <div>
@@ -134,6 +140,8 @@ export default function CreateWell() {
                      name="rig"
                      onChange={handleInputChange}
                     ></input>
+
+                    {/* add checkboxes for drilled and typelog */}
 
                     <div>
                         <input type ="submit" value= "Add Well" className="submitButton" />
