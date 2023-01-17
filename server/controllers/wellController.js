@@ -26,7 +26,7 @@ module.exports = {
             });
 
             if (!wellData) {
-                res.status(404).json({message: 'No well with that id'})
+                res.status(400).json({message: 'No well with that id'})
                 return;
             };
 

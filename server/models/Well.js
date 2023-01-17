@@ -55,12 +55,24 @@ Well.init(
             type: DataTypes.INTEGER,
             allowNull: true,
         },
-        logProg: {
+        td: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+        },
+        typeLog: {
             type: DataTypes.STRING,
             allowNull: true,
         },
         rig: {
             type: DataTypes.STRING,
+            allowNull: true,
+        },
+        drilled: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true,
+        },
+        typelog: {
+            type: DataTypes.BOOLEAN,
             allowNull: true,
         },
         pad_id: {

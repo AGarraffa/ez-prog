@@ -28,11 +28,8 @@ export default function CreatePad() {
         for( const property in formData) {
             localStorage.setItem(`${property}`, `${formData[property]}`);
         }
-        // localStorage.setItem('Pad', formData.padName);
-        // localStorage.setItem('State', formData.state);
-        // localStorage.setItem('County', formData.county);
-        // localStorage.setItem('')
 
+        //use a for-in to loop through this?
         let data = {
             name: formData.padName,
             // pull project and company id's from the server upon login.
